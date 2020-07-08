@@ -17,3 +17,30 @@
   </div>
   <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
 </div>
+<script>
+    setInterval(function() {
+      NotRetain();
+    }, 500)
+    function NotRetain() {
+      //不保留小数点
+      var NowTime = parseInt(new Date().getTime() );
+      var StarTime = 1594137600000;
+      //秒
+      var time = parseInt((NowTime - StarTime) / 1000)
+      var second = parseInt(time%60);
+      var minute = parseInt((time/60)%60);
+      var hour = parseInt((time/(60*60))%24);
+      var day = parseInt((time/(60*60*24))%365);
+      var year = parseInt(day/365);
+      
+      document.getElementById("second").innerHTML = second;
+      //分
+      document.getElementById("minute").innerHTML = minute;
+      //时
+      document.getElementById("hour").innerHTML = hour;
+      //天
+      document.getElementById("day").innerHTML = day;
+      //年
+      document.getElementById("year").innerHTML = year;
+    }
+  </script>
