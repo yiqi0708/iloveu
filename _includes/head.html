@@ -5,7 +5,10 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <embed src="{{ 'https://yiqi0708.github.io/iloveu/assets/js/1.mp3' }}" autostart="true" loop="true"></embed>
+  <audio controls height="100" width="100">
+  <source src="https://yiqi0708.github.io/iloveu/assets/js/1.mp3" type="audio/mpeg">
+  <embed src="https://yiqi0708.github.io/iloveu/assets/js/1.mp3" autostart="true" loop="true">
+</audio>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
   <link rel="shortcut icon" type="image/png" href="{{ '/assets/favicon.png' }}" >
 </head>
